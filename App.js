@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Audio, interruptionModeAndroid, interruptionModeIOS} from 'expo-av';
+import {Audio, InterruptionModeAndroid, InterruptionModeIOS} from 'expo-av';
 import { Feather } from '@expo/vector-icons';
 import * as SplashScreen from 'expo-splash-screen';
 import {
@@ -52,7 +52,7 @@ export default class App extends Component {
 
   async loadAudio() {
     const playbackInstance = new Audio.Sound();
-    const source = './music/ukulele.mp3'
+    const source = require('./music/ukulele.mp3');
 		const status = {
 			shouldPlay: this.state.isPlaying,
 			volume: this.state.volume,
